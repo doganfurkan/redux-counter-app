@@ -7,8 +7,14 @@ export const counterSlice = createSlice({
 
     },
     reducers: {
-
+        increase: (state) => {
+            state.value += 1;
+        },
+        decrease: (state) => {
+            state.value -= 1;
+        }
     }
 })
 
+export const {increase, decrease} = counterSlice.actions;
 export default counterSlice.reducer;
